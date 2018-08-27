@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<title>{{.Title}}</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<h1>Index page</h1>
+	<div>{{.Msg}}</div>
+
+	<div>
+		<form action="/api/accounts/add" method="post" id="form1">
+			<fieldset>
+				<legend>Add an account</legend>
+					Sum: <input type="text" name="sum"><br>
+					<input type="submit" value="Submit">
+			</fieldset>
+		</form>
+	</div>
+
+	<div>
+		<form action="/api/accounts" id="form2">
+			<fieldset>
+				<legend>Show an account</legend>
+					Id: <input type="text" name="id"><br>
+					<input type="submit" value="Submit">
+			</fieldset>
+		</form>
+	</div>
+
+	<div>
+		<form action="/api/accounts/transfer" method="post" id="form3">
+			<fieldset>
+				<legend>Transfer money</legend>
+					FromId: <input type="text" name="fromid"><br>
+					ToId: <input type="text" name="toid"><br>
+					Sum: <input type="text" name="sum"><br>
+					<input type="submit" value="Submit">
+			</fieldset>
+		</form>
+	</div>
+	
+</body>
+</html>
